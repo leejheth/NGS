@@ -1,2 +1,2 @@
 # NGS
-GNS quality control, alignment, visualization
+NGS data quality control, alignment, visualization
