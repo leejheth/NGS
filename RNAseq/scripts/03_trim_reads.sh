@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-TRIMMED_DIR=~/workdir/group4/jihyun/results/trimmed
-READS_DIR=~/workdir/group4/jihyun/data/fastq
+BASE_DIR=$(pwd)
+
+TRIMMED_DIR=$BASE_DIR/RNAseq/results/trimmed
+READS_DIR=$BASE_DIR/RNAseq/data/fastq
 
 mkdir -p $TRIMMED_DIR
 cd $TRIMMED_DIR

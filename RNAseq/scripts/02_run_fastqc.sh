@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
-cd ~/group4/jihyun/data/fastq
+
+BASE_DIR=$(pwd)
+
+cd $BASE_DIR/RNAseq/data/fastq
 
 fastqc *.fastq.gz

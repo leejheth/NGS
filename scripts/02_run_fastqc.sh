@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-cd ~/workdir/reads
 
+BASE_DIR=$(pwd)
+
+cd $BASE_DIR/reads
 fastqc *.fastq

@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-REFERENCE_DIR=~/workdir/group4/jihyun/data/reference
-ALIGNED_DIR=~/workdir/group4/jihyun/results/alignments
+BASE_DIR=$(pwd)
+
+REFERENCE_DIR=$BASE_DIR/RNAseq/data/reference
+ALIGNED_DIR=$BASE_DIR/RNAseq/results/alignments
 
 featureCounts \
 -p \

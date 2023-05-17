@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-TRIMMED_DIR=~/workdir/results/trimmed
-REFERENCE_DIR=~/workdir/ref_genome
-ALIGNED_DIR=~/workdir/results/alignments
+BASE_DIR=$(pwd)
+
+TRIMMED_DIR=$BASE_DIR/results/trimmed
+REFERENCE_DIR=$BASE_DIR/ref_genome
+ALIGNED_DIR=$BASE_DIR/results/alignments
 
 bowtie2 \
 -x $REFERENCE_DIR/ecoli-strK12-MG1655.fasta \

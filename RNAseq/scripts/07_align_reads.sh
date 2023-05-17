@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-TRIMMED_DIR=~/workdir/group4/jihyun/results/trimmed
-REFERENCE_DIR=~/workdir/group4/jihyun/data/reference
-ALIGNED_DIR=~/workdir/group4/jihyun/results/alignments
+BASE_DIR=$(pwd)
+
+TRIMMED_DIR=$BASE_DIR/RNAseq/results/trimmed
+REFERENCE_DIR=$BASE_DIR/RNAseq/data/reference
+ALIGNED_DIR=$BASE_DIR/RNAseq/results/alignments
 
 mkdir -p $ALIGNED_DIR
 

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-REFERENCE_DIR=~/workdir/group4/jihyun/data/ref_genome/
+BASE_DIR=$(pwd)
+
+REFERENCE_DIR=$BASE_DIR/RNAseq/data/ref_genome/
 
 mkdir $REFERENCE_DIR
 cd $REFERENCE_DIR

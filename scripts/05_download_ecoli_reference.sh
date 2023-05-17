@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-REFERENCE_DIR=~/workdir/ref_genome/
+BASE_DIR=$(pwd)
+REFERENCE_DIR=$BASE_DIR/ref_genome/
 
 mkdir $REFERENCE_DIR
 cd $REFERENCE_DIR

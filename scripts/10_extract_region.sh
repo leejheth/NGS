@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-cd ~/workdir/results/alignments
+BASE_DIR=$(pwd)
+
+cd $BASE_DIR/results/alignments
 
 samtools view -bh \
 SRR519926.sorted.bam \
