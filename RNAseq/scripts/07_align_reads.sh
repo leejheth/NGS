@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 TRIMMED_DIR=~/workdir/group4/jihyun/results/trimmed
-REFERENCE_DIR=~/workdir/group4/jihyun/data/ref_genome
+REFERENCE_DIR=~/workdir/group4/jihyun/data/reference
 ALIGNED_DIR=~/workdir/group4/jihyun/results/alignments
 
 mkdir -p $ALIGNED_DIR
@@ -11,10 +11,10 @@ do
     for IND in 1 2 3
     do
         hisat2 \
-        -x $REFERENCE_DIR/mouse_ch5.fasta \
+        -x $REFERENCE_DIR/Mus_musculus_GRCm38_dna_chromosome_5.fa \
         -1 $TRIMMED_DIR/trimmed_${condition}${IND}_R1.fastq \
         -2 $TRIMMED_DIR/trimmed_${condition}${IND}_R2.fastq \
-        --threads 3 \
+        --threads 4 \
         2> $ALIGNED_DIR/${condition}${IND}.log \
         | tee $ALIGNED_DIR/${condition}${IND}.sam \
         | samtools flagstat - \
@@ -22,7 +22,8 @@ do
 
         samtools sort $ALIGNED_DIR/${condition}${IND}.sam \
         | samtools view -bh - \
-        > $ALIGNED_DIR/${condition}${IND}.sorted.bam
+        | tee $ALIGNED_DIR/${condition}${IND}.sorted.bam \
+        | samtools index -o $ALIGNED_DIR/${condition}${IND}.sorted.bam.bai -
     done
 done
 
