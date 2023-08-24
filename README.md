@@ -1,5 +1,5 @@
 # NGS
-Swiss Institute of Bioinformatics course "NGS data quality control, alignment, visualization"
+A project as part of Swiss Institute of Bioinformatics course "NGS data quality control, alignment, visualization"
 
 RNA-seq data analysis project.
 
